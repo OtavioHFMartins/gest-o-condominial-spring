@@ -21,7 +21,6 @@ public class DespesaController {
 
     @PostMapping
     public void cadastrarDespesa(@RequestBody DespesaRequest request) {
-        service = new DespesaServiceImpl();
         service.cadastrar(request);
 
     }
