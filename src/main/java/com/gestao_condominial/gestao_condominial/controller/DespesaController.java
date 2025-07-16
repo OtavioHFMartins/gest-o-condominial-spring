@@ -1,21 +1,25 @@
 package com.gestao_condominial.gestao_condominial.controller;
 
 
+import com.gestao_condominial.gestao_condominial.domain.Despesa;
 import com.gestao_condominial.gestao_condominial.dto.DespesaRequest;
 import com.gestao_condominial.gestao_condominial.service.DespesaService;
-import com.gestao_condominial.gestao_condominial.service.DespesaServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
+
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("api/despesas")
 public class DespesaController {
 
     // http://localhost:8081/api/despesas
 
-    @Autowired
-    public DespesaService service;
+    public final DespesaService service;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -24,6 +28,17 @@ public class DespesaController {
 
     }
 
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<Despesa> listarDespesas(){
+        return service.listar();
 
+    }
+
+    @GetMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public Despesa getDespesaPorId(@PathVariable Long id){
+        return service.buscarPorId(id);
+    }
 
 }

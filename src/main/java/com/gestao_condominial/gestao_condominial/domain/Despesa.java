@@ -1,16 +1,18 @@
 package com.gestao_condominial.gestao_condominial.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.gestao_condominial.gestao_condominial.domain.enums.StatusDespesa;
 import jakarta.persistence.*;
 import lombok.*;
+
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /*
- Jakarta = JPA
- Vamos utilizar uma lib chamada Hibernate (mapeamento de banco de dados no Java)
- */
+    jakarta = JPA
+    Vamos usar uma lib chamada Hibernate (mapeamento de banco de dados no java
+*/
 
 @Getter
 @Setter
@@ -18,6 +20,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@EqualsAndHashCode(of = "id")
 @Table(name = "despesas")
 public class Despesa {
 
@@ -37,16 +40,17 @@ public class Despesa {
     @Column(name = "valor_pago")
     private Double valorPago;
 
-    @Column(name = "data_criacao")
-    private LocalDateTime dataCriacao;
-
     @Column(name = "data_pagamento")
     private LocalDate dataPagamento;
 
     @Column(name = "data_vencimento", nullable = false)
     private LocalDate dataVencimento;
 
+    @Column(name = "data_criacao")
+    private LocalDateTime dataCriacao;
+
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusDespesa status;
+
 }

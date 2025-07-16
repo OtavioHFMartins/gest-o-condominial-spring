@@ -1,8 +1,10 @@
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\config\AppConfig.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\controller\DespesaController.java
+C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\converter\DespesaConverter.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\domain\Despesa.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\domain\enums\StatusDespesa.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\dto\DespesaRequest.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\GestaoCondominialApplication.java
+C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\repository\DespesaRepository.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\service\DespesaService.java
 C:\Users\tatah\Desktop\workspace\gestão-condominial\src\main\java\com\gestao_condominial\gestao_condominial\service\DespesaServiceImpl.java

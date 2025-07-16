@@ -2,7 +2,9 @@ com\gestao_condominial\gestao_condominial\domain\enums\StatusDespesa.class
 com\gestao_condominial\gestao_condominial\controller\DespesaController.class
 com\gestao_condominial\gestao_condominial\service\DespesaServiceImpl.class
 com\gestao_condominial\gestao_condominial\GestaoCondominialApplication.class
+com\gestao_condominial\gestao_condominial\converter\DespesaConverter.class
 com\gestao_condominial\gestao_condominial\service\DespesaService.class
 com\gestao_condominial\gestao_condominial\config\AppConfig.class
 com\gestao_condominial\gestao_condominial\dto\DespesaRequest.class
+com\gestao_condominial\gestao_condominial\repository\DespesaRepository.class
 com\gestao_condominial\gestao_condominial\domain\Despesa.class
