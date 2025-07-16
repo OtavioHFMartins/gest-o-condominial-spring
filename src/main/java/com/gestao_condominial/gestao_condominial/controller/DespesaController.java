@@ -35,6 +35,13 @@ public class DespesaController {
 
     }
 
+    @GetMapping("filtro")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Despesa> listarDespesasComFiltro(@RequestParam(value = "status", required = false) String status){
+        return service.listar(status);
+
+    }
+
     @GetMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public Despesa getDespesaPorId(@PathVariable Long id){
